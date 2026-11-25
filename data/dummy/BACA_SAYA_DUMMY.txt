@@ -1,0 +1,3 @@
+Folder ini berisi DATA DUMMY (sintetis) untuk menguji program.
+Bukan data ulasan asli. Ganti dengan CSV Apify asli di data/raw/ dan set
+USE_DUMMY = False di config.py.

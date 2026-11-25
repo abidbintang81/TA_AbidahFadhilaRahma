@@ -1,0 +1,3 @@
+model,coherence_cv,topic_diversity,n_topics
+LDA,0.5762,0.96,5
+BERTopic,0.7434,0.9714,7

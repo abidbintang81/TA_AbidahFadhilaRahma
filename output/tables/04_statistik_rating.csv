@@ -1,0 +1,3 @@
+platform,count,mean,median,std,min,max
+IMDb,674,7.556,8.0,1.795,2.0,10.0
+Letterboxd,332,7.56,8.0,2.278,1.0,10.0

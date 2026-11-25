@@ -1,0 +1,1232 @@
+{
+  "meta": {
+    "is_dummy": true,
+    "PERINGATAN": "HASIL DARI DATA DUMMY - BUKAN HASIL PENELITIAN ASLI",
+    "generated_at": "2026-11-24T05:53:43",
+    "imdb_csv": "DUMMY_imdb_obsession_reviews.csv",
+    "letterboxd_csv": "DUMMY_letterboxd_obsession_reviews.csv",
+    "embedding_backend": "FALLBACK_tfidf_svd (bukan all-MiniLM-L6-v2)",
+    "runtime_seconds": 170.7,
+    "params": {
+      "lda_k_range": [
+        2,
+        15
+      ],
+      "lda_passes": 20,
+      "k_selection": "first_peak",
+      "lda_seeds": 3,
+      "lda_alpha": "auto",
+      "dict_no_below": 3,
+      "dict_no_above": 0.5,
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 5,
+        "min_dist": 0.0,
+        "metric": "cosine"
+      },
+      "hdbscan": {
+        "min_cluster_size": 15,
+        "metric": "euclidean",
+        "cluster_selection_method": "eom"
+      },
+      "min_topic_size": 15,
+      "outlier_strategy": "embeddings",
+      "top_n_words": 10,
+      "align_threshold": 0.15,
+      "alpha": 0.05,
+      "random_state": 42,
+      "letterboxd_rating_factor": 2
+    }
+  },
+  "data_selection_stages": [
+    {
+      "tahap": "Data awal",
+      "IMDb": 700,
+      "Letterboxd": 360,
+      "Total": 1060
+    },
+    {
+      "tahap": "Setelah hapus ulasan kosong",
+      "IMDb": 696,
+      "Letterboxd": 357,
+      "Total": 1053
+    },
+    {
+      "tahap": "Setelah hapus duplikat",
+      "IMDb": 681,
+      "Letterboxd": 343,
+      "Total": 1024
+    },
+    {
+      "tahap": "Setelah hapus non-Inggris",
+      "IMDb": 675,
+      "Letterboxd": 337,
+      "Total": 1012
+    },
+    {
+      "tahap": "Setelah hapus ulasan terlalu pendek",
+      "IMDb": 674,
+      "Letterboxd": 332,
+      "Total": 1006
+    }
+  ],
+  "review_length_words": [
+    {
+      "platform": "IMDb",
+      "count": 674,
+      "mean": 61.64,
+      "median": 62.0,
+      "std": 22.74,
+      "min": 12,
+      "max": 118
+    },
+    {
+      "platform": "Letterboxd",
+      "count": 332,
+      "mean": 29.36,
+      "median": 29.0,
+      "std": 12.71,
+      "min": 6,
+      "max": 63
+    }
+  ],
+  "rating_10_stats": [
+    {
+      "platform": "IMDb",
+      "count": 674,
+      "mean": 7.556,
+      "median": 8.0,
+      "std": 1.795,
+      "min": 2.0,
+      "max": 10.0
+    },
+    {
+      "platform": "Letterboxd",
+      "count": 332,
+      "mean": 7.56,
+      "median": 8.0,
+      "std": 2.278,
+      "min": 1.0,
+      "max": 10.0
+    }
+  ],
+  "lda": {
+    "coherence_by_k": [
+      {
+        "k": 2,
+        "coherence_cv": 0.5254,
+        "coherence_cv_std": 0.0532,
+        "coherence_cv_runs": [
+          0.4544,
+          0.5826,
+          0.5393
+        ],
+        "topic_diversity": 0.9333,
+        "topic_quality": 0.4904
+      },
+      {
+        "k": 3,
+        "coherence_cv": 0.5361,
+        "coherence_cv_std": 0.0232,
+        "coherence_cv_runs": [
+          0.5071,
+          0.5373,
+          0.564
+        ],
+        "topic_diversity": 0.9111,
+        "topic_quality": 0.4885
+      },
+      {
+        "k": 4,
+        "coherence_cv": 0.5585,
+        "coherence_cv_std": 0.034,
+        "coherence_cv_runs": [
+          0.5302,
+          0.6062,
+          0.539
+        ],
+        "topic_diversity": 0.925,
+        "topic_quality": 0.5166
+      },
+      {
+        "k": 5,
+        "coherence_cv": 0.6013,
+        "coherence_cv_std": 0.0238,
+        "coherence_cv_runs": [
+          0.5762,
+          0.5944,
+          0.6332
+        ],
+        "topic_diversity": 0.92,
+        "topic_quality": 0.5532
+      },
+      {
+        "k": 6,
+        "coherence_cv": 0.5987,
+        "coherence_cv_std": 0.0575,
+        "coherence_cv_runs": [
+          0.5263,
+          0.6028,
+          0.6671
+        ],
+        "topic_diversity": 0.9167,
+        "topic_quality": 0.5488
+      },
+      {
+        "k": 7,
+        "coherence_cv": 0.6399,
+        "coherence_cv_std": 0.0265,
+        "coherence_cv_runs": [
+          0.6052,
+          0.6446,
+          0.6697
+        ],
+        "topic_diversity": 0.8905,
+        "topic_quality": 0.5698
+      },
+      {
+        "k": 8,
+        "coherence_cv": 0.6287,
+        "coherence_cv_std": 0.033,
+        "coherence_cv_runs": [
+          0.6535,
+          0.6505,
+          0.5821
+        ],
+        "topic_diversity": 0.8875,
+        "topic_quality": 0.558
+      },
+      {
+        "k": 9,
+        "coherence_cv": 0.6558,
+        "coherence_cv_std": 0.0078,
+        "coherence_cv_runs": [
+          0.6669,
+          0.6493,
+          0.6514
+        ],
+        "topic_diversity": 0.9,
+        "topic_quality": 0.5903
+      },
+      {
+        "k": 10,
+        "coherence_cv": 0.6366,
+        "coherence_cv_std": 0.0467,
+        "coherence_cv_runs": [
+          0.6132,
+          0.7017,
+          0.5948
+        ],
+        "topic_diversity": 0.8867,
+        "topic_quality": 0.5644
+      },
+      {
+        "k": 11,
+        "coherence_cv": 0.6202,
+        "coherence_cv_std": 0.0288,
+        "coherence_cv_runs": [
+          0.5848,
+          0.6553,
+          0.6205
+        ],
+        "topic_diversity": 0.8909,
+        "topic_quality": 0.5525
+      },
+      {
+        "k": 12,
+        "coherence_cv": 0.6501,
+        "coherence_cv_std": 0.0327,
+        "coherence_cv_runs": [
+          0.6095,
+          0.6896,
+          0.6512
+        ],
+        "topic_diversity": 0.9,
+        "topic_quality": 0.5851
+      },
+      {
+        "k": 13,
+        "coherence_cv": 0.6541,
+        "coherence_cv_std": 0.0287,
+        "coherence_cv_runs": [
+          0.614,
+          0.6797,
+          0.6685
+        ],
+        "topic_diversity": 0.8667,
+        "topic_quality": 0.5669
+      },
+      {
+        "k": 14,
+        "coherence_cv": 0.6584,
+        "coherence_cv_std": 0.0286,
+        "coherence_cv_runs": [
+          0.618,
+          0.6783,
+          0.679
+        ],
+        "topic_diversity": 0.8738,
+        "topic_quality": 0.5754
+      },
+      {
+        "k": 15,
+        "coherence_cv": 0.6523,
+        "coherence_cv_std": 0.0272,
+        "coherence_cv_runs": [
+          0.6394,
+          0.6273,
+          0.69
+        ],
+        "topic_diversity": 0.8711,
+        "topic_quality": 0.5682
+      }
+    ],
+    "selected_k": 5,
+    "k_selection_rule": "first_peak",
+    "k_max_cv": 14,
+    "seeds_per_k": 3,
+    "dictionary_size": 627,
+    "coherence_cv": 0.5762,
+    "topic_diversity": 0.96,
+    "topics": [
+      {
+        "topic": 1,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "wow",
+          "barker",
+          "genuinely",
+          "expect",
+          "minute",
+          "cinema",
+          "first",
+          "use",
+          "trailer",
+          "atmosphere"
+        ],
+        "weights": [
+          0.0148,
+          0.0133,
+          0.0117,
+          0.0116,
+          0.0111,
+          0.011,
+          0.0109,
+          0.0105,
+          0.0099,
+          0.0096
+        ],
+        "coherence_cv": 0.5337,
+        "n_IMDb": 108,
+        "pct_IMDb": 16.02,
+        "mean_rating_IMDb": 7.593,
+        "median_rating_IMDb": 8.0,
+        "n_Letterboxd": 33,
+        "pct_Letterboxd": 9.94,
+        "mean_rating_Letterboxd": 6.758,
+        "median_rating_Letterboxd": 7.0,
+        "mean_rating_all": 7.397
+      },
+      {
+        "topic": 2,
+        "label_id": "Jump scare, suara, dan atmosfer",
+        "label_en": "Jump scares, sound, and atmosphere",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "work",
+          "scare",
+          "sound",
+          "practical",
+          "jump",
+          "effect",
+          "design",
+          "blood",
+          "violence",
+          "best"
+        ],
+        "weights": [
+          0.0179,
+          0.0173,
+          0.0138,
+          0.0136,
+          0.0124,
+          0.0105,
+          0.0103,
+          0.0102,
+          0.0093,
+          0.0092
+        ],
+        "coherence_cv": 0.771,
+        "n_IMDb": 143,
+        "pct_IMDb": 21.22,
+        "mean_rating_IMDb": 7.622,
+        "median_rating_IMDb": 8.0,
+        "n_Letterboxd": 40,
+        "pct_Letterboxd": 12.05,
+        "mean_rating_Letterboxd": 7.825,
+        "median_rating_Letterboxd": 8.0,
+        "mean_rating_all": 7.667
+      },
+      {
+        "topic": 3,
+        "label_id": "Logika dan penulisan karakter",
+        "label_en": "Character logic and writing",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "bear",
+          "love",
+          "character",
+          "need",
+          "finish",
+          "start",
+          "never",
+          "talk",
+          "day",
+          "process"
+        ],
+        "weights": [
+          0.0159,
+          0.0142,
+          0.0137,
+          0.0132,
+          0.0122,
+          0.0122,
+          0.0118,
+          0.0111,
+          0.0109,
+          0.0109
+        ],
+        "coherence_cv": 0.4732,
+        "n_IMDb": 135,
+        "pct_IMDb": 20.03,
+        "mean_rating_IMDb": 7.2,
+        "median_rating_IMDb": 7.0,
+        "n_Letterboxd": 82,
+        "pct_Letterboxd": 24.7,
+        "mean_rating_Letterboxd": 7.232,
+        "median_rating_Letterboxd": 8.0,
+        "mean_rating_all": 7.212
+      },
+      {
+        "topic": 4,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "nikki",
+          "work",
+          "lead",
+          "performance",
+          "act",
+          "cast",
+          "wish",
+          "crowd",
+          "part",
+          "theater"
+        ],
+        "weights": [
+          0.0197,
+          0.0184,
+          0.018,
+          0.0154,
+          0.015,
+          0.0144,
+          0.0136,
+          0.0128,
+          0.0126,
+          0.011
+        ],
+        "coherence_cv": 0.5857,
+        "n_IMDb": 165,
+        "pct_IMDb": 24.48,
+        "mean_rating_IMDb": 8.073,
+        "median_rating_IMDb": 8.0,
+        "n_Letterboxd": 60,
+        "pct_Letterboxd": 18.07,
+        "mean_rating_Letterboxd": 8.167,
+        "median_rating_Letterboxd": 9.0,
+        "mean_rating_all": 8.098
+      },
+      {
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "work",
+          "dark",
+          "humor",
+          "hard",
+          "laugh",
+          "experience",
+          "self",
+          "surprisingly",
+          "comedy",
+          "consent"
+        ],
+        "weights": [
+          0.0245,
+          0.0196,
+          0.0192,
+          0.0176,
+          0.0167,
+          0.0138,
+          0.0131,
+          0.0129,
+          0.0125,
+          0.0125
+        ],
+        "coherence_cv": 0.5177,
+        "n_IMDb": 123,
+        "pct_IMDb": 18.25,
+        "mean_rating_IMDb": 7.146,
+        "median_rating_IMDb": 7.0,
+        "n_Letterboxd": 117,
+        "pct_Letterboxd": 35.24,
+        "mean_rating_Letterboxd": 7.615,
+        "median_rating_Letterboxd": 8.0,
+        "mean_rating_all": 7.375
+      }
+    ],
+    "mean_topic_proportion": [
+      {
+        "topic": 1,
+        "mean_prop_IMDb": 0.165,
+        "mean_prop_Letterboxd": 0.1158
+      },
+      {
+        "topic": 2,
+        "mean_prop_IMDb": 0.2138,
+        "mean_prop_Letterboxd": 0.1251
+      },
+      {
+        "topic": 3,
+        "mean_prop_IMDb": 0.1952,
+        "mean_prop_Letterboxd": 0.2347
+      },
+      {
+        "topic": 4,
+        "mean_prop_IMDb": 0.239,
+        "mean_prop_Letterboxd": 0.1928
+      },
+      {
+        "topic": 5,
+        "mean_prop_IMDb": 0.187,
+        "mean_prop_Letterboxd": 0.3316
+      }
+    ],
+    "chi_square": {
+      "chi2": 49.4044,
+      "df": 4,
+      "p_value": 4.807725161308902e-10,
+      "cramers_v": 0.2216,
+      "n": 1006,
+      "alpha": 0.05,
+      "significant": true,
+      "cells_expected_lt5": 0,
+      "cells_total": 10
+    },
+    "kruskal_rating_by_topic": {
+      "H": 27.7852,
+      "df": 4,
+      "p_value": 1.3787927561508184e-05,
+      "significant": true
+    }
+  },
+  "bertopic": {
+    "n_topics": 7,
+    "outliers_before_reduce": 36,
+    "outliers_after_reduce": 0,
+    "coherence_cv": 0.7434,
+    "topic_diversity": 0.9714,
+    "topics": [
+      {
+        "topic": 1,
+        "label_id": "Topik campuran/umum",
+        "label_en": "Mixed/general topic",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "wow",
+          "people",
+          "trailer",
+          "put",
+          "word",
+          "year",
+          "start",
+          "finish",
+          "feeling",
+          "mixed"
+        ],
+        "weights": [
+          0.0766,
+          0.0688,
+          0.0628,
+          0.0626,
+          0.0626,
+          0.0592,
+          0.057,
+          0.057,
+          0.0558,
+          0.0544
+        ],
+        "coherence_cv": 0.4348,
+        "n_IMDb": 132,
+        "pct_IMDb": 19.58,
+        "mean_rating_IMDb": 6.841,
+        "median_rating_IMDb": 7.0,
+        "n_Letterboxd": 66,
+        "pct_Letterboxd": 19.88,
+        "mean_rating_Letterboxd": 7.121,
+        "median_rating_Letterboxd": 7.0,
+        "mean_rating_all": 6.934
+      },
+      {
+        "topic": 2,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "nikki",
+          "navarrette",
+          "lead",
+          "performance",
+          "actress",
+          "cast",
+          "play",
+          "act",
+          "every",
+          "work"
+        ],
+        "weights": [
+          0.0824,
+          0.064,
+          0.0633,
+          0.0629,
+          0.0568,
+          0.0519,
+          0.0443,
+          0.041,
+          0.0389,
+          0.0375
+        ],
+        "coherence_cv": 0.8124,
+        "n_IMDb": 124,
+        "pct_IMDb": 18.4,
+        "mean_rating_IMDb": 8.379,
+        "median_rating_IMDb": 9.0,
+        "n_Letterboxd": 54,
+        "pct_Letterboxd": 16.27,
+        "mean_rating_Letterboxd": 8.907,
+        "median_rating_Letterboxd": 9.0,
+        "mean_rating_all": 8.539
+      },
+      {
+        "topic": 3,
+        "label_id": "Gore dan body horror",
+        "label_en": "Gore and body horror",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "scare",
+          "jump",
+          "violence",
+          "sound",
+          "practical",
+          "blood",
+          "use",
+          "effect",
+          "body",
+          "genuinely"
+        ],
+        "weights": [
+          0.0576,
+          0.0493,
+          0.0482,
+          0.0448,
+          0.0446,
+          0.0437,
+          0.0423,
+          0.0416,
+          0.0395,
+          0.0394
+        ],
+        "coherence_cv": 0.825,
+        "n_IMDb": 135,
+        "pct_IMDb": 20.03,
+        "mean_rating_IMDb": 7.659,
+        "median_rating_IMDb": 8.0,
+        "n_Letterboxd": 31,
+        "pct_Letterboxd": 9.34,
+        "mean_rating_Letterboxd": 8.097,
+        "median_rating_Letterboxd": 9.0,
+        "mean_rating_all": 7.741
+      },
+      {
+        "topic": 4,
+        "label_id": "Tema: obsesi, consent, relasi toksik",
+        "label_en": "Themes: obsession, consent, toxic love",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "character",
+          "consent",
+          "bear",
+          "choice",
+          "commentary",
+          "love",
+          "relationship",
+          "toxic",
+          "write",
+          "work"
+        ],
+        "weights": [
+          0.0778,
+          0.0601,
+          0.0588,
+          0.0525,
+          0.0499,
+          0.0478,
+          0.0439,
+          0.0428,
+          0.0407,
+          0.0396
+        ],
+        "coherence_cv": 0.7385,
+        "n_IMDb": 77,
+        "pct_IMDb": 11.42,
+        "mean_rating_IMDb": 6.844,
+        "median_rating_IMDb": 7.0,
+        "n_Letterboxd": 67,
+        "pct_Letterboxd": 20.18,
+        "mean_rating_Letterboxd": 7.075,
+        "median_rating_Letterboxd": 8.0,
+        "mean_rating_all": 6.951
+      },
+      {
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "humor",
+          "laugh",
+          "dark",
+          "comedy",
+          "moment",
+          "tone",
+          "service",
+          "customer",
+          "together",
+          "joke"
+        ],
+        "weights": [
+          0.1187,
+          0.1007,
+          0.0814,
+          0.0793,
+          0.0664,
+          0.0661,
+          0.0639,
+          0.0639,
+          0.0585,
+          0.0581
+        ],
+        "coherence_cv": 0.7999,
+        "n_IMDb": 49,
+        "pct_IMDb": 7.27,
+        "mean_rating_IMDb": 7.959,
+        "median_rating_IMDb": 8.0,
+        "n_Letterboxd": 67,
+        "pct_Letterboxd": 20.18,
+        "mean_rating_Letterboxd": 7.716,
+        "median_rating_Letterboxd": 8.0,
+        "mean_rating_all": 7.819
+      },
+      {
+        "topic": 6,
+        "label_id": "Premis dan alur cerita (wish)",
+        "label_en": "Premise and plot (the wish)",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "wish",
+          "act",
+          "plot",
+          "third",
+          "concept",
+          "build",
+          "finale",
+          "final",
+          "story",
+          "pace"
+        ],
+        "weights": [
+          0.0832,
+          0.0612,
+          0.0557,
+          0.0556,
+          0.0547,
+          0.0544,
+          0.0533,
+          0.0497,
+          0.0475,
+          0.0437
+        ],
+        "coherence_cv": 0.7849,
+        "n_IMDb": 83,
+        "pct_IMDb": 12.31,
+        "mean_rating_IMDb": 7.157,
+        "median_rating_IMDb": 7.0,
+        "n_Letterboxd": 33,
+        "pct_Letterboxd": 9.94,
+        "mean_rating_Letterboxd": 6.242,
+        "median_rating_Letterboxd": 6.0,
+        "mean_rating_all": 6.897
+      },
+      {
+        "topic": 7,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "label_source": "otomatis (usulan leksikon)",
+        "top_words": [
+          "crowd",
+          "barker",
+          "theater",
+          "youtube",
+          "debut",
+          "experience",
+          "budget",
+          "cinema",
+          "cinematography",
+          "camera"
+        ],
+        "weights": [
+          0.082,
+          0.0666,
+          0.0604,
+          0.0587,
+          0.0555,
+          0.0537,
+          0.0474,
+          0.0467,
+          0.0448,
+          0.0444
+        ],
+        "coherence_cv": 0.8084,
+        "n_IMDb": 74,
+        "pct_IMDb": 10.98,
+        "mean_rating_IMDb": 8.189,
+        "median_rating_IMDb": 9.0,
+        "n_Letterboxd": 14,
+        "pct_Letterboxd": 4.22,
+        "mean_rating_Letterboxd": 7.929,
+        "median_rating_Letterboxd": 8.5,
+        "mean_rating_all": 8.148
+      }
+    ],
+    "chi_square": {
+      "chi2": 72.7778,
+      "df": 6,
+      "p_value": 1.0996688888713255e-13,
+      "cramers_v": 0.269,
+      "n": 1006,
+      "alpha": 0.05,
+      "significant": true,
+      "cells_expected_lt5": 0,
+      "cells_total": 14
+    },
+    "kruskal_rating_by_topic": {
+      "H": 105.2176,
+      "df": 6,
+      "p_value": 2.0412024112165533e-20,
+      "significant": true
+    }
+  },
+  "alignment": {
+    "jaccard_matrix": {
+      "rows_lda": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cols_bertopic": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "values": [
+        [
+          0.1111,
+          0.0,
+          0.1111,
+          0.0,
+          0.0,
+          0.0,
+          0.1111
+        ],
+        [
+          0.0,
+          0.0526,
+          0.5385,
+          0.0526,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.1111,
+          0.0,
+          0.0,
+          0.1765,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.4286,
+          0.0,
+          0.0526,
+          0.0,
+          0.1111,
+          0.1111
+        ],
+        [
+          0.0,
+          0.0526,
+          0.0,
+          0.1111,
+          0.25,
+          0.0,
+          0.0526
+        ]
+      ]
+    },
+    "pairs": [
+      {
+        "lda_topic": 1,
+        "bertopic_topic": 1,
+        "jaccard": 0.1111,
+        "status": "tidak cocok",
+        "lda_label": "Sutradara, produksi, dan debut",
+        "bertopic_label": "Topik campuran/umum"
+      },
+      {
+        "lda_topic": 2,
+        "bertopic_topic": 3,
+        "jaccard": 0.5385,
+        "status": "konsisten",
+        "lda_label": "Jump scare, suara, dan atmosfer",
+        "bertopic_label": "Gore dan body horror"
+      },
+      {
+        "lda_topic": 3,
+        "bertopic_topic": 4,
+        "jaccard": 0.1765,
+        "status": "konsisten",
+        "lda_label": "Logika dan penulisan karakter",
+        "bertopic_label": "Tema: obsesi, consent, relasi toksik"
+      },
+      {
+        "lda_topic": 4,
+        "bertopic_topic": 2,
+        "jaccard": 0.4286,
+        "status": "konsisten",
+        "lda_label": "Akting dan performa pemeran",
+        "bertopic_label": "Akting dan performa pemeran"
+      },
+      {
+        "lda_topic": 5,
+        "bertopic_topic": 5,
+        "jaccard": 0.25,
+        "status": "konsisten",
+        "lda_label": "Humor dan nada film",
+        "bertopic_label": "Humor dan nada film"
+      }
+    ],
+    "only_lda": [
+      1
+    ],
+    "only_bertopic": [
+      1,
+      6,
+      7
+    ],
+    "threshold": 0.15
+  },
+  "preference": {
+    "lda": [
+      {
+        "platform": "IMDb",
+        "rank": 1,
+        "topic": 4,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "n": 165,
+        "pct": 24.48,
+        "mean_rating_10": 8.073,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 2,
+        "topic": 2,
+        "label_id": "Jump scare, suara, dan atmosfer",
+        "label_en": "Jump scares, sound, and atmosphere",
+        "n": 143,
+        "pct": 21.22,
+        "mean_rating_10": 7.622,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 3,
+        "topic": 3,
+        "label_id": "Logika dan penulisan karakter",
+        "label_en": "Character logic and writing",
+        "n": 135,
+        "pct": 20.03,
+        "mean_rating_10": 7.2,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 4,
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "n": 123,
+        "pct": 18.25,
+        "mean_rating_10": 7.146,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 5,
+        "topic": 1,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "n": 108,
+        "pct": 16.02,
+        "mean_rating_10": 7.593,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 1,
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "n": 117,
+        "pct": 35.24,
+        "mean_rating_10": 7.615,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 2,
+        "topic": 3,
+        "label_id": "Logika dan penulisan karakter",
+        "label_en": "Character logic and writing",
+        "n": 82,
+        "pct": 24.7,
+        "mean_rating_10": 7.232,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 3,
+        "topic": 4,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "n": 60,
+        "pct": 18.07,
+        "mean_rating_10": 8.167,
+        "median_rating_10": 9.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 4,
+        "topic": 2,
+        "label_id": "Jump scare, suara, dan atmosfer",
+        "label_en": "Jump scares, sound, and atmosphere",
+        "n": 40,
+        "pct": 12.05,
+        "mean_rating_10": 7.825,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 5,
+        "topic": 1,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "n": 33,
+        "pct": 9.94,
+        "mean_rating_10": 6.758,
+        "median_rating_10": 7.0
+      }
+    ],
+    "bertopic": [
+      {
+        "platform": "IMDb",
+        "rank": 1,
+        "topic": 3,
+        "label_id": "Gore dan body horror",
+        "label_en": "Gore and body horror",
+        "n": 135,
+        "pct": 20.03,
+        "mean_rating_10": 7.659,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 2,
+        "topic": 1,
+        "label_id": "Topik campuran/umum",
+        "label_en": "Mixed/general topic",
+        "n": 132,
+        "pct": 19.58,
+        "mean_rating_10": 6.841,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 3,
+        "topic": 2,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "n": 124,
+        "pct": 18.4,
+        "mean_rating_10": 8.379,
+        "median_rating_10": 9.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 4,
+        "topic": 6,
+        "label_id": "Premis dan alur cerita (wish)",
+        "label_en": "Premise and plot (the wish)",
+        "n": 83,
+        "pct": 12.31,
+        "mean_rating_10": 7.157,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 5,
+        "topic": 4,
+        "label_id": "Tema: obsesi, consent, relasi toksik",
+        "label_en": "Themes: obsession, consent, toxic love",
+        "n": 77,
+        "pct": 11.42,
+        "mean_rating_10": 6.844,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 6,
+        "topic": 7,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "n": 74,
+        "pct": 10.98,
+        "mean_rating_10": 8.189,
+        "median_rating_10": 9.0
+      },
+      {
+        "platform": "IMDb",
+        "rank": 7,
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "n": 49,
+        "pct": 7.27,
+        "mean_rating_10": 7.959,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 1,
+        "topic": 4,
+        "label_id": "Tema: obsesi, consent, relasi toksik",
+        "label_en": "Themes: obsession, consent, toxic love",
+        "n": 67,
+        "pct": 20.18,
+        "mean_rating_10": 7.075,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 2,
+        "topic": 5,
+        "label_id": "Humor dan nada film",
+        "label_en": "Humor and tone",
+        "n": 67,
+        "pct": 20.18,
+        "mean_rating_10": 7.716,
+        "median_rating_10": 8.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 3,
+        "topic": 1,
+        "label_id": "Topik campuran/umum",
+        "label_en": "Mixed/general topic",
+        "n": 66,
+        "pct": 19.88,
+        "mean_rating_10": 7.121,
+        "median_rating_10": 7.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 4,
+        "topic": 2,
+        "label_id": "Akting dan performa pemeran",
+        "label_en": "Acting and performance",
+        "n": 54,
+        "pct": 16.27,
+        "mean_rating_10": 8.907,
+        "median_rating_10": 9.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 5,
+        "topic": 6,
+        "label_id": "Premis dan alur cerita (wish)",
+        "label_en": "Premise and plot (the wish)",
+        "n": 33,
+        "pct": 9.94,
+        "mean_rating_10": 6.242,
+        "median_rating_10": 6.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 6,
+        "topic": 3,
+        "label_id": "Gore dan body horror",
+        "label_en": "Gore and body horror",
+        "n": 31,
+        "pct": 9.34,
+        "mean_rating_10": 8.097,
+        "median_rating_10": 9.0
+      },
+      {
+        "platform": "Letterboxd",
+        "rank": 7,
+        "topic": 7,
+        "label_id": "Sutradara, produksi, dan debut",
+        "label_en": "Director, production, and debut",
+        "n": 14,
+        "pct": 4.22,
+        "mean_rating_10": 7.929,
+        "median_rating_10": 8.5
+      }
+    ]
+  }
+}

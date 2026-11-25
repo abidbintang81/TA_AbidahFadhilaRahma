@@ -1,0 +1,15 @@
+platform,rank,topic,label_id,label_en,n,pct,mean_rating_10,median_rating_10
+IMDb,1,3,Gore dan body horror,Gore and body horror,135,20.03,7.659,8.0
+IMDb,2,1,Topik campuran/umum,Mixed/general topic,132,19.58,6.841,7.0
+IMDb,3,2,Akting dan performa pemeran,Acting and performance,124,18.4,8.379,9.0
+IMDb,4,6,Premis dan alur cerita (wish),Premise and plot (the wish),83,12.31,7.157,7.0
+IMDb,5,4,"Tema: obsesi, consent, relasi toksik","Themes: obsession, consent, toxic love",77,11.42,6.844,7.0
+IMDb,6,7,"Sutradara, produksi, dan debut","Director, production, and debut",74,10.98,8.189,9.0
+IMDb,7,5,Humor dan nada film,Humor and tone,49,7.27,7.959,8.0
+Letterboxd,1,4,"Tema: obsesi, consent, relasi toksik","Themes: obsession, consent, toxic love",67,20.18,7.075,8.0
+Letterboxd,2,5,Humor dan nada film,Humor and tone,67,20.18,7.716,8.0
+Letterboxd,3,1,Topik campuran/umum,Mixed/general topic,66,19.88,7.121,7.0
+Letterboxd,4,2,Akting dan performa pemeran,Acting and performance,54,16.27,8.907,9.0
+Letterboxd,5,6,Premis dan alur cerita (wish),Premise and plot (the wish),33,9.94,6.242,6.0
+Letterboxd,6,3,Gore dan body horror,Gore and body horror,31,9.34,8.097,9.0
+Letterboxd,7,7,"Sutradara, produksi, dan debut","Director, production, and debut",14,4.22,7.929,8.5

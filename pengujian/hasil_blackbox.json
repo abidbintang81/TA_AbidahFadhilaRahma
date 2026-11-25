@@ -1,0 +1,179 @@
+{
+ "tanggal": "25 November 2026",
+ "alat": "Playwright 1.63.0 (Chromium 158, headless), viewport 1440x1000",
+ "streamlit": "1.67.0",
+ "plotly": "7.2.0",
+ "data": "DUMMY (summary.json run 2026-11-24 05:53)",
+ "hasil": [
+  {
+   "id": "BB-01",
+   "fitur": "Halaman Ringkasan",
+   "skenario": "Membuka aplikasi pertama kali",
+   "harapan": "Halaman 01 Ringkasan tampil dengan angka kunci (ulasan dianalisis, IMDb, Letterboxd, C_v LDA, C_v BERTopic)",
+   "aktual": "Judul \"Apa yang dibicarakan penonton Obsession?\" tampil; kartu angka kunci memuat 5 dari 5 indikator",
+   "ok": true
+  },
+  {
+   "id": "BB-02",
+   "fitur": "Penanda data dummy",
+   "skenario": "Membuka aplikasi saat summary.json berstatus is_dummy = true",
+   "harapan": "Banner \"DATA DUMMY\" tampil di halaman",
+   "aktual": "Banner \"DATA DUMMY\" tampil",
+   "ok": true
+  },
+  {
+   "id": "BB-03",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"02 Data & Preprocessing\" pada sidebar",
+   "harapan": "Halaman 02 Data & Preprocessing tampil tanpa pesan galat",
+   "aktual": "Halaman 02 Data & Preprocessing tampil (\"Dari data mentah ke korpus bersih\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-04",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"03 Topik LDA\" pada sidebar",
+   "harapan": "Halaman 03 Topik LDA tampil tanpa pesan galat",
+   "aktual": "Halaman 03 Topik LDA tampil (\"5 topik dari model probabilistik\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-05",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"04 Topik BERTopic\" pada sidebar",
+   "harapan": "Halaman 04 Topik BERTopic tampil tanpa pesan galat",
+   "aktual": "Halaman 04 Topik BERTopic tampil (\"7 topik dari klaster makna kalimat\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-06",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"05 Evaluasi & Pencocokan\" pada sidebar",
+   "harapan": "Halaman 05 Evaluasi & Pencocokan tampil tanpa pesan galat",
+   "aktual": "Halaman 05 Evaluasi & Pencocokan tampil (\"Dua metode, satu peta topik\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-07",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"06 Perbandingan Platform\" pada sidebar",
+   "harapan": "Halaman 06 Perbandingan Platform tampil tanpa pesan galat",
+   "aktual": "Halaman 06 Perbandingan Platform tampil (\"IMDb dan Letterboxd membicarakan hal yang berbeda?\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-08",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"07 Rating & Preferensi\" pada sidebar",
+   "harapan": "Halaman 07 Rating & Preferensi tampil tanpa pesan galat",
+   "aktual": "Halaman 07 Rating & Preferensi tampil (\"Topik mana yang disukai penonton?\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-09",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"08 Penjelajah Ulasan\" pada sidebar",
+   "harapan": "Halaman 08 Penjelajah Ulasan tampil tanpa pesan galat",
+   "aktual": "Halaman 08 Penjelajah Ulasan tampil (\"Baca ulasannya langsung\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-10",
+   "fitur": "Navigasi",
+   "skenario": "Memilih menu \"09 Jalankan Ulang\" pada sidebar",
+   "harapan": "Halaman 09 Jalankan Ulang tampil tanpa pesan galat",
+   "aktual": "Halaman 09 Jalankan Ulang tampil (\"Ganti data, jalankan lagi\"), tidak ada galat",
+   "ok": true
+  },
+  {
+   "id": "BB-11",
+   "fitur": "Bahasa label topik",
+   "skenario": "Mengubah pengalih bahasa label dari INDONESIA ke ENGLISH",
+   "harapan": "Label topik ditampilkan dalam bahasa Inggris",
+   "aktual": "Label topik berubah ke bahasa Inggris",
+   "ok": true
+  },
+  {
+   "id": "BB-12",
+   "fitur": "Topik LDA",
+   "skenario": "Memilih topik terakhir (6 pilihan) pada bagian ulasan representatif",
+   "harapan": "Contoh ulasan berganti sesuai topik yang dipilih",
+   "aktual": "Contoh ulasan berganti sesuai topik terpilih",
+   "ok": true
+  },
+  {
+   "id": "BB-13",
+   "fitur": "Peta dokumen",
+   "skenario": "Mengubah pewarnaan peta dokumen dari Topik ke Platform",
+   "harapan": "Legenda peta berubah menjadi IMDb dan Letterboxd",
+   "aktual": "Legenda menampilkan IMDb dan Letterboxd",
+   "ok": true
+  },
+  {
+   "id": "BB-14",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Membuka halaman tanpa mengubah filter",
+   "harapan": "Seluruh ulasan hasil seleksi tampil (1.006 ulasan: 674 IMDb, 332 Letterboxd)",
+   "aktual": "Tampil: 1006 ulasan · 674 IMDb · 332 Letterboxd · rata-rata rating 7,56",
+   "ok": true
+  },
+  {
+   "id": "BB-15",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Menghapus Letterboxd dari filter platform",
+   "harapan": "Hanya ulasan IMDb yang tampil (674 ulasan, 0 Letterboxd)",
+   "aktual": "Tampil: 674 ulasan · 674 IMDb · 0 Letterboxd · rata-rata rating 7,56",
+   "ok": true
+  },
+  {
+   "id": "BB-16",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Mengisi kata kunci \"ending\"",
+   "harapan": "Hanya ulasan yang memuat kata \"ending\" yang tampil (52 ulasan) dan kata tersebut disorot",
+   "aktual": "Tampil: 52 ulasan · 45 IMDb · 7 Letterboxd · rata-rata rating 7,52; 12 sorotan pada halaman pertama",
+   "ok": true
+  },
+  {
+   "id": "BB-17",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Mengisi kata kunci yang tidak ada di korpus (\"xyzqwv\")",
+   "harapan": "Hasil 0 ulasan tanpa pesan galat",
+   "aktual": "Tampil: 0 ulasan · 0 IMDb · 0 Letterboxd; galat: tidak ada",
+   "ok": true
+  },
+  {
+   "id": "BB-18",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Mengubah tampilan dari Kartu ke Tabel",
+   "harapan": "Ulasan tampil dalam bentuk tabel",
+   "aktual": "Tabel ulasan tampil",
+   "ok": true
+  },
+  {
+   "id": "BB-19",
+   "fitur": "Penjelajah Ulasan",
+   "skenario": "Menekan tombol \"Unduh hasil saringan (CSV)\"",
+   "harapan": "Berkas ulasan_terfilter.csv terunduh dan berisi ulasan hasil saringan",
+   "aktual": "Berkas ulasan_terfilter.csv terunduh; kolom: review_id, platform, date, rating_raw, rating_10, ...",
+   "ok": true
+  },
+  {
+   "id": "BB-20",
+   "fitur": "Jalankan Ulang",
+   "skenario": "Mengunggah CSV IMDb saja lalu menekan \"Jalankan pipeline\"",
+   "harapan": "Muncul peringatan untuk mengunggah kedua file dan pipeline tidak dijalankan",
+   "aktual": "Muncul peringatan \"Unggah kedua file (IMDb dan Letterboxd) untuk memakai data asli.\"; pipeline tidak dijalankan",
+   "ok": true
+  },
+  {
+   "id": "BB-21",
+   "fitur": "Penanganan hasil kosong",
+   "skenario": "Membuka aplikasi saat berkas output/summary.json belum ada",
+   "harapan": "Menu hanya menampilkan halaman Jalankan Ulang tanpa pesan galat",
+   "aktual": "Hanya menu \"09 Jalankan Ulang\" yang tampil, tidak ada galat",
+   "ok": true
+  }
+ ],
+ "lolos": 21,
+ "total": 21
+}

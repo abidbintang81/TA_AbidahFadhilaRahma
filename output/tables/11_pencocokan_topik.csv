@@ -1,0 +1,6 @@
+lda_topic,bertopic_topic,jaccard,status,lda_label,bertopic_label
+1,1,0.1111,tidak cocok,"Sutradara, produksi, dan debut",Topik campuran/umum
+2,3,0.5385,konsisten,"Jump scare, suara, dan atmosfer",Gore dan body horror
+3,4,0.1765,konsisten,Logika dan penulisan karakter,"Tema: obsesi, consent, relasi toksik"
+4,2,0.4286,konsisten,Akting dan performa pemeran,Akting dan performa pemeran
+5,5,0.25,konsisten,Humor dan nada film,Humor dan nada film

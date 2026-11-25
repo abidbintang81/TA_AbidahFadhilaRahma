@@ -1,0 +1,11 @@
+platform,rank,topic,label_id,label_en,n,pct,mean_rating_10,median_rating_10
+IMDb,1,4,Akting dan performa pemeran,Acting and performance,165,24.48,8.073,8.0
+IMDb,2,2,"Jump scare, suara, dan atmosfer","Jump scares, sound, and atmosphere",143,21.22,7.622,8.0
+IMDb,3,3,Logika dan penulisan karakter,Character logic and writing,135,20.03,7.2,7.0
+IMDb,4,5,Humor dan nada film,Humor and tone,123,18.25,7.146,7.0
+IMDb,5,1,"Sutradara, produksi, dan debut","Director, production, and debut",108,16.02,7.593,8.0
+Letterboxd,1,5,Humor dan nada film,Humor and tone,117,35.24,7.615,8.0
+Letterboxd,2,3,Logika dan penulisan karakter,Character logic and writing,82,24.7,7.232,8.0
+Letterboxd,3,4,Akting dan performa pemeran,Acting and performance,60,18.07,8.167,9.0
+Letterboxd,4,2,"Jump scare, suara, dan atmosfer","Jump scares, sound, and atmosphere",40,12.05,7.825,8.0
+Letterboxd,5,1,"Sutradara, produksi, dan debut","Director, production, and debut",33,9.94,6.758,7.0

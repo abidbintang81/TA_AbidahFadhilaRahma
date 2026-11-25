@@ -1,0 +1,3 @@
+model,chi2,df,p_value,cramers_v,n,alpha,significant,cells_expected_lt5,cells_total
+LDA,49.4044,4,4.807725161308902e-10,0.2216,1006,0.05,True,0,10
+BERTopic,72.7778,6,1.0996688888713255e-13,0.269,1006,0.05,True,0,14

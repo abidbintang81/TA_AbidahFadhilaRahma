@@ -1,0 +1,6 @@
+tahap,IMDb,Letterboxd,Total
+Data awal,700,360,1060
+Setelah hapus ulasan kosong,696,357,1053
+Setelah hapus duplikat,681,343,1024
+Setelah hapus non-Inggris,675,337,1012
+Setelah hapus ulasan terlalu pendek,674,332,1006
